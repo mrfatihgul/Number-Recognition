@@ -13,9 +13,9 @@ y_train = keras.utils.to_categorical(y_train, 10)
 y_test = keras.utils.to_categorical(y_test, 10)
 
 model = keras.Sequential([
-    keras.layers.Flatten(input_shape=(28, 28)),  # 28x28 resmi düzleştir
-    keras.layers.Dense(128, activation='relu'),  # 128 nöronlu gizli katman
-    keras.layers.Dense(10, activation='softmax')  # 10 sınıf için çıkış katmanı
+    keras.layers.Flatten(input_shape=(28, 28)),  
+    keras.layers.Dense(128, activation='relu'),
+    keras.layers.Dense(10, activation='softmax')
 ])
 
 model.compile(optimizer='adam',
